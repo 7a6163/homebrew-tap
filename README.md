@@ -21,6 +21,8 @@ brew install --cask 7a6163/tap/fanhuaji
 | Formula | Description |
 |---------|-------------|
 | [`sigilo`](https://github.com/7a6163/sigilo) | SSH agent for Bitwarden/Vaultwarden with a Touch ID prompt on every signature (macOS, builds from source with Rust) |
+| [`gem-audit`](https://github.com/7a6163/gem-audit) | Ultra-fast, standalone security auditor for `Gemfile.lock`, written in Rust (cross-platform, builds from source) |
+| [`rubyfast`](https://github.com/7a6163/rubyfast) | Ultra-fast Ruby performance linter rewritten in Rust, with auto-fix support (cross-platform, builds from source) |
 
 ## Casks
 
