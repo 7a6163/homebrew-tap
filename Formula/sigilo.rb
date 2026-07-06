@@ -1,8 +1,8 @@
 class Sigilo < Formula
   desc "SSH agent for Bitwarden/Vaultwarden with a Touch ID prompt on every signature"
   homepage "https://github.com/7a6163/sigilo"
-  url "https://github.com/7a6163/sigilo/archive/refs/tags/v0.1.1.tar.gz"
-  sha256 "101907ec0a08ede293accdefdcd9f6689f5a61767629a56b46d56536a041b8ae"
+  url "https://github.com/7a6163/sigilo/archive/refs/tags/v0.1.2.tar.gz"
+  sha256 "89b9a2ad04382fe5058964f75c254a591ee9e63c6aa1e536767e8cefcf1d74fd"
   license "MIT"
 
   depends_on "rust" => :build
