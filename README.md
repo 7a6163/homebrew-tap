@@ -13,6 +13,7 @@ Or install directly:
 
 ```sh
 brew install 7a6163/tap/sigilo
+brew install --cask 7a6163/tap/fanhuaji
 ```
 
 ## Formulae
@@ -20,6 +21,21 @@ brew install 7a6163/tap/sigilo
 | Formula | Description |
 |---------|-------------|
 | [`sigilo`](https://github.com/7a6163/sigilo) | SSH agent for Bitwarden/Vaultwarden with a Touch ID prompt on every signature (macOS, builds from source with Rust) |
+
+## Casks
+
+| Cask | Description |
+|------|-------------|
+| [`fanhuaji`](https://github.com/7a6163/fanhuaji-tauri) | 繁化姬 Tauri 版, Chinese text converter desktop app based on the zhconvert.org API (macOS, universal `.dmg`) |
+
+### fanhuaji
+
+The app is not signed by Apple. On first launch macOS may block it; open
+**System Settings > Privacy & Security** and click **Open Anyway**, or run:
+
+```sh
+xattr -cr "/Applications/Fanhuaji.app"
+```
 
 ### sigilo
 
