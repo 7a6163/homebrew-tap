@@ -1,7 +1,7 @@
 class Tapwarden < Formula
   desc "SSH agent for Bitwarden/Vaultwarden with a Touch ID prompt on every signature"
   homepage "https://github.com/7a6163/tapwarden"
-  version "0.2.1"
+  version "0.2.2"
   license "MIT"
 
   depends_on :macos
@@ -9,11 +9,11 @@ class Tapwarden < Formula
   on_macos do
     on_arm do
       url "https://github.com/7a6163/tapwarden/releases/download/v#{version}/tapwarden-v#{version}-aarch64-apple-darwin"
-      sha256 "4df651b22300115bd56ea64ba26c24e723e25f0235573baf491f333948cc57ee"
+      sha256 "0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5"
     end
     on_intel do
       url "https://github.com/7a6163/tapwarden/archive/refs/tags/v#{version}.tar.gz"
-      sha256 "2db1bab163a77781c81bd39504353a7388ea53117267be8c833f018502856155"
+      sha256 "132d8c7d3fe48ac64b71459b5a83630004895f3bd0c8015744662524bef6408b"
       depends_on "rust" => :build
     end
   end
