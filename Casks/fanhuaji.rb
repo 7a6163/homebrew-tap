@@ -1,6 +1,6 @@
 cask "fanhuaji" do
-  version "2.4.1"
-  sha256 "6f441bd7be39f0bf1eb70c8a5b652747f0893f5b0635d1733511ceb824a8cd32"
+  version "2.4.6"
+  sha256 "f0805aaa140f19da374699b7db3d93f284d35a12590817014a568cb34ac7e6a6"
 
   url "https://github.com/7a6163/fanhuaji-tauri/releases/download/v#{version}/Fanhuaji_#{version}_universal.dmg"
   name "Fanhuaji"
