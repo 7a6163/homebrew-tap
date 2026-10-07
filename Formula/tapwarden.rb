@@ -1,7 +1,7 @@
 class Tapwarden < Formula
   desc "SSH agent for Bitwarden/Vaultwarden with a Touch ID prompt on every signature"
   homepage "https://github.com/7a6163/tapwarden"
-  version "0.2.5"
+  version "0.3.0"
   license "MIT"
 
   depends_on :macos
@@ -9,11 +9,11 @@ class Tapwarden < Formula
   on_macos do
     on_arm do
       url "https://github.com/7a6163/tapwarden/releases/download/v#{version}/tapwarden-v#{version}-aarch64-apple-darwin"
-      sha256 "39a0a7df1d51712fa840866f481a06deb3b1e416c79a10f11c893aa104b7d349"
+      sha256 "964d3b7633dd069b789a3f9d78ea96dcee14a769d78a3ea435e9d17bc840250e"
     end
     on_intel do
       url "https://github.com/7a6163/tapwarden/archive/refs/tags/v#{version}.tar.gz"
-      sha256 "f87a6871e69a18c2b148a868161c638e9373e3651f181bd4a3b33a969a80ff4a"
+      sha256 "84e334550b83299967ee6586af447aa75e994e5300a341ce86f2a41cfa0375f4"
       depends_on "rust" => :build
     end
   end
@@ -36,6 +36,10 @@ class Tapwarden < Formula
 
       After upgrades the macOS keychain may re-prompt once for access
       (the unsigned binary changed).
+
+      Upgrading from 0.2.x: the agent socket moved out of $TMPDIR. Re-run
+      `tapwarden start` and update IdentityAgent in ~/.ssh/config to the
+      path it prints.
     EOS
   end
 
