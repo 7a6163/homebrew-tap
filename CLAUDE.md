@@ -1,4 +1,6 @@
-# AGENTS.md
+# CLAUDE.md
+
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
 ## Overview
 
@@ -55,13 +57,19 @@ Bumping a formula version:
 
 1. Update `version` and refresh every `sha256` (from the release's
    `sha256sums.txt`, or `curl -L <url> | shasum -a 256`).
-2. Run `brew audit --strict --online Formula/<name>.rb`.
+2. Run `brew audit --strict --online 7a6163/tap/<name>` (auditing by path is
+   disabled in current Homebrew). The audit reads the installed tap clone at
+   `$(brew --repository 7a6163/tap)`, not this checkout — fast-forward it first
+   with `git -C "$(brew --repository 7a6163/tap)" pull --ff-only <this repo> main`.
+   `--strict` reports "`version` is redundant with version scanned from URL";
+   that is expected from the pin-`version` convention above, so ignore it.
 3. Run `brew install 7a6163/tap/<name>` and `brew test 7a6163/tap/<name>`.
 
 Bumping a cask version:
 
 1. Update `version` and `sha256` (from the new release's macOS asset).
-2. Run `brew audit --strict --online Casks/<name>.rb`.
+2. Run `brew audit --strict --online --cask 7a6163/tap/<name>` (sync the tap
+   clone first, as above).
 3. Run `brew install --cask Casks/<name>.rb` to verify it installs.
 
 Adding a formula or cask:
@@ -78,3 +86,12 @@ Adding a formula or cask:
   once after upgrades. This is documented in the formula `caveats` and the README.
 - `fanhuaji` is also unsigned; Gatekeeper may block first launch. The cask
   `caveats` and README explain the `xattr -cr` / "Open Anyway" workaround.
+- `tapwarden` pins two checksums from different sources: the Apple Silicon
+  release binary (published as a per-asset
+  `tapwarden-v<version>-aarch64-apple-darwin.sha256`, not `sha256sums.txt`) and the Intel source
+  tarball `archive/refs/tags/v<version>.tar.gz`, which is not a release asset —
+  compute that one with `curl -L <url> | shasum -a 256`.
+- On an Apple Silicon machine, `brew install` only exercises the `on_arm`
+  branch; the Intel `cargo install` path is not tested locally.
+- Commit messages follow the pattern `Bump <name> to <version> and update
+  SHA-256 checksums` (casks: `Bump <name> cask to <version>`).
