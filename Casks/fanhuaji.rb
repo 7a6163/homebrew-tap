@@ -1,6 +1,6 @@
 cask "fanhuaji" do
-  version "2.4.6"
-  sha256 "f0805aaa140f19da374699b7db3d93f284d35a12590817014a568cb34ac7e6a6"
+  version "2.4.7"
+  sha256 "aeb312650b03a41ad450e82bf8a45b3459758f694d1952b6a3372c3601bbe2b0"
 
   url "https://github.com/7a6163/fanhuaji-tauri/releases/download/v#{version}/Fanhuaji_#{version}_universal.dmg"
   name "Fanhuaji"
@@ -9,7 +9,6 @@ cask "fanhuaji" do
   homepage "https://github.com/7a6163/fanhuaji-tauri"
 
   auto_updates true
-  depends_on macos: :catalina
 
   app "Fanhuaji.app"
 
