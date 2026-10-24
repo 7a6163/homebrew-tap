@@ -28,7 +28,7 @@ brew install --cask 7a6163/tap/fanhuaji
 
 | Cask | Description |
 |------|-------------|
-| [`fanhuaji`](https://github.com/7a6163/fanhuaji-tauri) | 繁化姬 Tauri 版, Chinese text converter desktop app based on the zhconvert.org API (macOS, universal `.dmg`) |
+| [`fanhuaji`](https://github.com/fanhuaji-desktop/fanhuaji-tauri) | 繁化姬 Tauri 版, Chinese text converter desktop app based on the zhconvert.org API (macOS, universal `.dmg`) |
 
 ### fanhuaji
 

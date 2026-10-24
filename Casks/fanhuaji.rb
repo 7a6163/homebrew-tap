@@ -2,11 +2,11 @@ cask "fanhuaji" do
   version "2.5.0"
   sha256 "148f9ba12949add2a1aa025991c53ed9aeed6b0dade6e6332e2ad475797c9298"
 
-  url "https://github.com/7a6163/fanhuaji-tauri/releases/download/v#{version}/Fanhuaji_#{version}_universal.dmg"
+  url "https://github.com/fanhuaji-desktop/fanhuaji-tauri/releases/download/v#{version}/Fanhuaji_#{version}_universal.dmg"
   name "Fanhuaji"
   name "繁化姬"
   desc "Chinese text converter desktop app (based on zhconvert.org API)"
-  homepage "https://github.com/7a6163/fanhuaji-tauri"
+  homepage "https://github.com/fanhuaji-desktop/fanhuaji-tauri"
 
   auto_updates true
 
